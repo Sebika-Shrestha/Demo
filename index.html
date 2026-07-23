@@ -6,6 +6,11 @@
   <title>Table Demo</title>
   <style>
     body{font-family:Arial,Helvetica,sans-serif;padding:20px}
+    form{max-width:900px;margin-bottom:24px}
+    label{display:block;margin-bottom:8px;font-weight:600}
+    input,textarea,select{width:100%;padding:10px;border:1px solid #ccc;border-radius:4px;margin-bottom:16px;box-sizing:border-box}
+    button{padding:10px 18px;background:#007acc;color:#fff;border:none;border-radius:4px;cursor:pointer}
+    button:hover{background:#005fa3}
     table{border-collapse:collapse;width:100%;max-width:900px}
     th,td{border:1px solid #ccc;padding:8px;text-align:left}
     th{background:#f4f4f4}
@@ -13,6 +18,26 @@
 </head>
 <body>
   <h1>Sample Table</h1>
+  <form action="#" method="post">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com">
+
+    <label for="role">Role</label>
+    <select id="role" name="role">
+      <option value="developer">Developer</option>
+      <option value="designer">Designer</option>
+      <option value="product">Product</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="4" placeholder="Add a note..."></textarea>
+
+    <button type="submit">Submit</button>
+  </form>
   <table>
     <thead>
       <tr>
